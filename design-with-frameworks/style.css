@@ -1,0 +1,153 @@
+/* Tip, copy paste from 13c.01.01 & 13c.01.02 to get fonts and colors up and running ... */
+
+:root {
+  /* fonts */
+  --font-display: "Manjari", sans-serif;
+  --font-body: "Roboto", sans-serif;
+
+  /* colors */
+  --accent_color_1: #fbc02e;
+  --accent_color_2: #51bad7;
+  --dark_accent_color_2: #284e52;
+  --black: #04160c;
+  --dark_grey: #676d7a;
+  --grey: #979ba2;
+  --light_grey: #d7dddb;
+  --white: #fefefe;
+}
+
+html {
+  font-size: 1em;
+  font-family: var(--font-body);
+  font-size: 1em;
+}
+
+/* HEADINGS & TEXT STYLING */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.827rem;
+  line-height: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.999rem;
+  line-height: 2.4rem;
+  margin: 1rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.414rem;
+  line-height: 1.8rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+/* IMAGES */
+
+.header_graphics img {
+  aspect-ratio: 1.5/1;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.advantages_card_graphics img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.product_graphics img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.team_graphics img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* NAV BAR */
+nav {
+  background-color: var(--white);
+  border-style: solid;
+  border-width: 2px;
+  border-inline: none;
+  border-top: none;
+  border-color: var(--dark_accent_color_2);
+
+  padding-inline: 1rem;
+}
+
+nav a {
+  color: var(--black);
+}
+
+nav a:hover {
+  color: var(--accent_color_2);
+}
+
+/* BUTTONS */
+button {
+  background-color: var(--accent_color_1);
+  border: none;
+  max-width: 10rem;
+
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: var(--accent_color_2);
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--dark_accent_color_2);
+  display: flex;
+  justify-content: space-between;
+}
+
+footer section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+}
+
+footer a {
+  color: var(--white);
+}
+
+footer h2,
+footer h3 {
+  color: var(--white);
+}
+
+/* HEADER */
+
+header {
+  align-content: center;
+}
+
+.header_text {
+  align-self: center;
+}

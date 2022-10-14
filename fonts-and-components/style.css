@@ -1,0 +1,316 @@
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* @font-face {
+  font-family: "Bebas Neue";
+  src: url("C:/Users/maria/OneDrive/Documents/FONTS/Bebas_Neue/BebasNeue-Regular.ttf");
+} */
+
+/* Color Properties */
+:root {
+  --color-darker: rgb(48, 48, 48);
+  --color-dark: rgb(64, 64, 64);
+  --color-light: rgb(194, 194, 194);
+  --color-lighter: rgb(255, 255, 255);
+  /* you could add an accent color for CTAs and anchor tags ;-) */
+
+  /* fonts */
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Roboto", sans-serif;
+}
+
+/* Fonts */
+html {
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-darker);
+  font-family: var(--font-display);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 5.6rem;
+  line-height: 5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 3.9rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--color-dark);
+  font-family: var(--font-body);
+  margin-bottom: 1rem;
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+}
+
+.light_button {
+  background-color: var(--color-lighter);
+  color: var(--color-darker);
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 2rem;
+  padding: 0.5rem;
+  text-align: left;
+  background-color: var(--color-lighter);
+  border-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+/* Menu */
+nav {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-darker);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-dark);
+}
+
+.header_text {
+  width: 40vw;
+  min-width: 300px;
+}
+
+.header_text h1 {
+  color: var(--color-lighter);
+}
+
+.header_text p {
+  color: var(--color-light);
+}
+
+.header_graphics {
+  width: 35vw;
+  height: 35vw;
+  min-width: 300px;
+  min-height: 300px;
+  background-color: var(--color-darker);
+}
+
+/* Sections */
+#intro {
+  display: flex;
+  min-height: 80vh;
+  padding: 0px 15rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-light);
+}
+
+.intro_text {
+  width: 40vw;
+  min-width: 450px;
+}
+
+.intro_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  background-color: var(--color-dark);
+}
+
+#cards {
+  min-height: 80vh;
+  padding: 5rem 2rem;
+}
+
+#card_container {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+/* cards */
+/*  <template id="card_template">
+    <div class="card">
+      <img class="card_image" />
+      <h3 class="card_name"></h3>
+      <p class="card_slogan"></p>
+      <p class="card_title"></p>
+      <p class="card_mail"></p>
+      <input type="button" value="Remove" class="card_button_negative"/>
+      <input type="button" value="Accept" class="card_button_positive"/>
+    </div>
+  </template> */
+
+.card {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0px 0px 8px 1px lightgray;
+  border-radius: 3px;
+
+  justify-content: space-between;
+}
+
+.card p {
+  margin-left: 1rem;
+}
+
+.card_image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card_name {
+  /* margin-top: -3rem;
+  margin-left: 1rem; */
+  /* color: var(--color-lighter); */
+  overflow-wrap: break-word;
+  min-width: 0;
+
+  position: relative;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.card_slogan {
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.card_title {
+  font-weight: bold;
+  font-size: large;
+}
+
+.card_mail a {
+  color: var(--color-dark);
+}
+
+.card input[type="button"] {
+  border-style: solid;
+  padding: 0.5rem;
+  padding-inline: 2rem;
+  border-radius: 3px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+.card_button_negative {
+  background-color: var(--color-lighter);
+}
+
+.card_button_positive {
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+}
+
+#info {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light);
+}
+
+.info_text {
+  width: 60vw;
+  min-width: 300px;
+}
+
+#contact {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-darker);
+}
+
+footer h2,
+footer h3 {
+  color: var(--color-lighter);
+}
+
+footer a {
+  color: var(--color-light);
+}
+
+footer section {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
+
+/* effects */
+
+.card:hover {
+  scale: 105%;
+}

@@ -1,0 +1,334 @@
+/* Tip, copy paste from 13c.01.01 & 13c.01.02 to get fonts and colors up and running ... */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  /* fonts */
+  --font-display: "Poppins", sans-serif;
+  --font-body: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 1em;
+  font-family: var(--font-body);
+  font-size: 1em;
+}
+
+/* HEADINGS & TEXT STYLING */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.827rem;
+  line-height: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.999rem;
+  line-height: 2.4rem;
+  margin: 1rem;
+}
+
+h3 {
+  font-size: 1.414rem;
+  line-height: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+/* HEADER */
+
+header {
+  display: grid;
+}
+
+.header_graphics {
+  background-image: url(images/pexels-kaboompics-com-6224.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  aspect-ratio: 1.5/1;
+  width: 100%;
+
+  z-index: 0;
+}
+
+.header_text {
+  z-index: 2;
+  margin: 2rem;
+  /* align-self: flex-end; */
+}
+
+/* ADVANTAGES SECTION */
+
+.advantages_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin: 2rem;
+  gap: 2rem;
+}
+
+.advantages_card {
+  display: grid;
+  max-width: 100%;
+
+  box-shadow: 1px 2px 3px lightgray;
+  border-radius: 3px;
+}
+
+.advantages_card_graphics {
+  background-image: url(images/pexels-marc-mueller-380769.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  aspect-ratio: 1/0.75;
+  width: 100%;
+
+  z-index: 1;
+}
+
+.advantages_card_text {
+  z-index: 2;
+  position: relative;
+  min-width: 0;
+  overflow-wrap: break-word;
+
+  align-self: end;
+  margin: 1rem;
+
+  justify-items: center;
+}
+
+/* PRODUCT */
+#product {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* #product h2 {
+  position: absolute;
+  justify-self: center;
+  margin-top: 3rem;
+} */
+
+.product_graphics {
+  background-image: url(images/pexels-michael-burrows-7148060.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  aspect-ratio: 16/9;
+  width: 100%;
+
+  /* grid-row: 2; */
+}
+
+.product_text {
+  /* grid-row: 2; */
+
+  margin: 2rem;
+}
+
+/* HIGHLIGHT */
+
+.highlight {
+  display: grid;
+  justify-items: center;
+  margin-inline: 2rem;
+  gap: 1rem;
+}
+
+.highlight_small_cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.highlight_small_cards div {
+  background-color: lightgray;
+  padding: 2rem;
+  border-radius: 3px;
+  box-shadow: 1px 2px 3px gray;
+  aspect-ratio: 16/9;
+}
+
+/* TEAM */
+
+#team {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#team h2 {
+  grid-row: 1;
+}
+
+#team article {
+  grid-row: 2, 3;
+  margin-inline: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  align-items: center;
+}
+
+.team_graphics {
+  background-image: url(images/pexels-michael-burrows-7147701.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  aspect-ratio: 1/1;
+  width: 100%;
+}
+
+.team_text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* CONTACT */
+
+#contact {
+  margin: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+#contact_form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+footer section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* MEDIA QUERIES */
+
+/* tablet */
+@media only screen and (min-width: 700px) {
+  /* product */
+  #product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem;
+    gap: 2rem;
+  }
+
+  .product_graphics {
+    grid-row: 2;
+    aspect-ratio: 1/1.25;
+  }
+
+  .product_text {
+    grid-row: 2;
+    margin: 0;
+    display: grid;
+    align-items: center;
+  }
+
+  /* highlight */
+  .highlight_small_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem;
+  }
+
+  .highlight button {
+    justify-self: end;
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 900px) {
+  /* header */
+  header {
+    grid-template-columns: 1.25fr 1fr;
+    margin: 2rem;
+  }
+
+  .header_graphics {
+    aspect-ratio: 1.25/1;
+    align-self: center;
+  }
+
+  .header_text {
+    align-self: end;
+    margin: 0;
+  }
+
+  /* team */
+  #team {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  #team article {
+    grid-row: 2;
+  }
+
+  .team_graphics {
+    aspect-ratio: 1/1.25;
+  }
+}
+
+/* wide screen */
+@media only screen and (min-width: 1100px) {
+}
