@@ -309,7 +309,6 @@ button {
 }
 
 button:hover {
-  scale: 102%;
   cursor: pointer;
 }
 
@@ -370,6 +369,22 @@ a:hover::after {
   transition: all 0.1s ease-in-out;
 }
 
+/* project page buttons */
+
+.a-button::after {
+  display: none;
+}
+
+.a-button:hover {
+  scale: 102%;
+  cursor: pointer;
+}
+
+/* home page buttons */
+.projects_card_text button:hover {
+  scale: 102%;
+}
+
 /* ---------- PROJECT PAGE ---------- */
 
 /* intro header section */
@@ -422,7 +437,7 @@ a:hover::after {
   margin: 1rem;
 }
 
-.project_details_text button {
+.project_details_text .a-button {
   justify-self: right;
   margin: 1rem;
 }
