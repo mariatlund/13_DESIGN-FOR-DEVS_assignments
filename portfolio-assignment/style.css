@@ -38,20 +38,20 @@ h3 {
 }
 
 h1 {
-  font-size: 5.6rem;
+  font-size: 4.3rem;
   line-height: 5rem;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 3.9rem;
+  font-size: 3rem;
   line-height: 3rem;
   margin: 2rem;
   margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
@@ -61,7 +61,7 @@ p {
 }
 
 header p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
 }
 
@@ -128,7 +128,6 @@ nav ul {
 /* HEADER */
 
 header {
-  /* display: grid; */
   margin: 2rem;
   word-wrap: break-word;
 }
@@ -144,14 +143,10 @@ header {
 }
 
 .link_icons {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   gap: 2rem;
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
-
-  margin-top: 3rem;
-  margin-right: 6rem;
+  margin-top: 1rem;
 }
 
 .link_icons a {
@@ -192,7 +187,6 @@ header {
 
 .projects_card_graphics {
   width: 100%;
-  background-color: red;
   z-index: 1;
 }
 
@@ -208,14 +202,16 @@ header {
   position: relative;
   min-width: 0;
   overflow-wrap: break-word;
-
-  align-self: end;
   margin: 2rem;
 
-  justify-items: center;
+  display: grid;
 }
 
-/* TEAM */
+.projects_card_text button {
+  justify-self: right;
+}
+
+/* LEARN */
 
 #learn {
   display: grid;
@@ -231,25 +227,17 @@ header {
 #learn section {
   margin: 0;
   margin-inline: 3rem;
-  /* margin-bottom: 1rem; */
 }
 
 #learn article {
-  grid-row: 2, 3;
   margin-inline: 2rem;
+  gap: 2rem;
 
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 5rem;
-
-  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .learn_graphics {
-  /* background-image: url(images/pexels-michael-burrows-7147701.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; */
   width: 100%;
   height: 100%;
 }
@@ -297,6 +285,11 @@ footer section {
 footer .credit {
   display: grid;
   align-content: center;
+}
+
+.external-credits {
+  font-size: 0.8rem;
+  color: lightgray;
 }
 
 /* BUTTONS & HOVER EFFECTS */
@@ -377,19 +370,12 @@ a:hover::after {
   transition: all 0.1s ease-in-out;
 }
 
-/* icons */
-/* .iconset:hover {
-  color: var(--blue);
-  fill: var(--blue);
-  cursor: pointer;
-} */
-
 /* ---------- PROJECT PAGE ---------- */
 
 /* intro header section */
 .project_intro {
-  margin: 2rem;
   max-width: 100%;
+  margin: 1rem;
 
   display: flex;
   flex-direction: row;
@@ -398,8 +384,8 @@ a:hover::after {
 }
 
 .project_info {
-  align-self: flex-start;
-  margin: 2rem;
+  align-self: right;
+  justify-self: right;
 }
 
 /* visuals section */
@@ -431,10 +417,56 @@ a:hover::after {
   object-fit: cover;
 }
 
-/* MEDIA QUERIES */
+.project_details_text {
+  display: grid;
+  margin: 1rem;
+}
+
+.project_details_text button {
+  justify-self: right;
+  margin: 1rem;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
 
 /* desktop */
 @media only screen and (min-width: 900px) {
+  /* font sizes */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 5.6rem;
+    line-height: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 3.9rem;
+    line-height: 3rem;
+    margin: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  header p {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+
   /* header */
   header {
     grid-template-columns: 1.25fr 1fr;
@@ -452,24 +484,51 @@ a:hover::after {
     margin: 0;
   }
 
+  .link_icons {
+    margin-top: 3rem;
+    margin-right: 6rem;
+  }
+
   /* sections */
   section {
     margin: 4rem;
   }
 
-  /* learn */
-  #learn article {
-    grid-template-columns: 1fr 1fr;
+  /* PROJECT PAGE */
+  .project_intro {
+    margin: 2rem;
   }
 
-  /* PROJECT PAGE */
   .project_intro_text {
     max-width: 50%;
   }
 
+  .project_details_text {
+    margin-inline: 4rem;
+  }
+}
+
+/* wide screen */
+@media only screen and (min-width: 1100px) {
+  /* learn */
+  #learn article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-inline: 2rem;
+    gap: 5rem;
+
+    align-items: center;
+  }
+
+  /* project page */
+
   #project_visual {
     margin-inline: 6rem;
     max-width: 60%;
+  }
+
+  .project_info {
+    margin-inline: 2rem;
   }
 
   #project_details {
@@ -480,14 +539,11 @@ a:hover::after {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* justify-items: right; */
-    /* justify-content: center; */
 
-    margin: 8rem;
+    margin-inline: 8rem;
   }
 
   .project_details_graphics {
-    /* max-width: 60%; */
     object-fit: cover;
   }
 
@@ -497,9 +553,6 @@ a:hover::after {
 
   .project_details_text {
     width: 100%;
+    margin: 1rem;
   }
-}
-
-/* wide screen */
-@media only screen and (min-width: 1100px) {
 }
